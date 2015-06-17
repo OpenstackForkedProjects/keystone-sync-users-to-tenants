@@ -10,6 +10,22 @@ If you want to have a tenant for each of your users in OpenStack Keystone, look 
 * Blacklisting of users which you don't want to be synced 
 
 ## How to run
+
+```
+usage: sync_users_to_tenants.py [-h] [--os-token TOKEN]
+                                [--os-endpoint ENDPOINT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --os-token TOKEN      Specify an endpoint to use instead of retrieving one
+                        from the service catalog (via authentication).
+                        Defaults to env[OS_SERVICE_ENDPOINT].
+  --os-endpoint ENDPOINT
+                        Specify an existing token to use instead of retrieving
+                        one via authentication (e.g. with username &
+                        password). Defaults to env[OS_SERVICE_TOKEN].
+```
+
 How you use this script is up to you. Use it manually, via cron or somewhere in your pipeline.
 
 ## Configuration
